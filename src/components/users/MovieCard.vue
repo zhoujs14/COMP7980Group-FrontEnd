@@ -1,6 +1,6 @@
 <template>
-  <div class="card" @click="">
-    <div class="poster">poster</div>
+  <div class="card">
+    <div class="poster w-100">poster</div>
     <div>Movie Name</div>
     <div class="btnRow">
       <div class="column">Release Time</div>
@@ -31,7 +31,11 @@ export default {
 }
 
 .poster {
+  display: flex;
   border-bottom: 1px solid gray;
   height: 230px;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
 }
 </style>
