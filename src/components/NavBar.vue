@@ -1,35 +1,50 @@
 <template>
-  <nav>
-    <div>
+  <header>
+    <!-- left side -->
+    <div class="item">
       <a href="/" class="item">Home</a>
+      <CategorySelector />
+      <a class="item">Search</a>
     </div>
-    <div>
-      <div class="item">Sign in</div>
-    </div>
-  </nav>
+    <!-- right side -->
+    <div class="item">Sign in</div>
+  </header>
 </template>
 
 <script>
+//顶部导航栏
+//主页 种类选择 搜索 登录
+import Search from './Search.vue';
+import CategorySelector from './CategorySelector.vue'
+import { ref } from 'vue';
+
 export default {
-  name: 'NavBar',
+  name: "NavBar",
+  components: { Search, CategorySelector },
+  setup() {
+    return {}
+  }
 }
 </script>
 
 <style>
-nav {
+header {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
-  height: 50px;
   align-items: center;
   background-color: #333;
+  overflow: visible;
 }
 
 .item {
-  display: block;
+  height: 50px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   color: white;
   cursor: pointer;
