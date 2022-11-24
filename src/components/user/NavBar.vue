@@ -5,7 +5,8 @@
     <div class="item">
       <a href="/" class="item">Home</a>
       <CategorySelector />
-      <a class="item" href="Search">Search</a>
+      <a class="item" href="/Search">Search</a>
+      <a class="item" href="#">Rank</a>
     </div>
     <!-- right side -->
     <div class="item" data-bs-toggle="modal" data-bs-target="#signInModal">Sign in</div>
