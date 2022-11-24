@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@/views/users/Home.vue'
-import MovieDetail from '@/views/users/MovieDetail.vue'
-import CategoryDetail from '@/views/users/CategoryDetail.vue'
+import Home from '@/views/user/Home.vue'
+import MovieDetail from '@/views/user/MovieDetail.vue'
+import CategoryDetail from '@/views/user/CategoryDetail.vue'
+import Search from '@/views/user/Search'
 
 const routes = [
   {
@@ -18,7 +19,13 @@ const routes = [
     path: '/category/:name',
     name: 'CategoryDetail',
     component: CategoryDetail,
-  }
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search,
+  },
+
 ]
 
 const router = createRouter({

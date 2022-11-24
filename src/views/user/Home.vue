@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import NavBar from '@/components/users/NavBar.vue';
-import Carousel from '@/components/users/Carousel.vue';
-import MovieList from '@/components/users/MovieList.vue';
+import NavBar from '@/components/user/NavBar.vue';
+import Carousel from '@/components/user/Carousel.vue';
+import MovieList from '@/components/user/MovieList.vue';
 
 export default {
   name: "Home",

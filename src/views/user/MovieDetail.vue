@@ -9,12 +9,13 @@
   <div>简介</div>
   <div>评分</div>
   <div>主演</div>
+  <button>购票</button>
   <hr />
   <div>评论</div>
 </template>
 
 <script>
-import NavBar from '../../components/users/NavBar.vue';
+import NavBar from '../../components/user/NavBar.vue';
 
 export default {
   name: "MovieDetail",

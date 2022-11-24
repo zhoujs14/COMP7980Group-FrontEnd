@@ -8,8 +8,8 @@
 <script>
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import MovieList from '../../components/users/MovieList.vue';
-import NavBar from '../../components/users/NavBar.vue';
+import MovieList from '../../components/user/MovieList.vue';
+import NavBar from '../../components/user/NavBar.vue';
 
 export default {
   name: "CategoryDetail",
