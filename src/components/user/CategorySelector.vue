@@ -10,7 +10,7 @@
 </template>
 <script>
 // 选取电影类别 跳转类别页面
-import { ref,watch } from 'vue';
+import { ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 export default {
   name: "CategorySelector",
@@ -34,7 +34,7 @@ export default {
 
     const router = useRouter()
     const onClick = (item) => {
-      router.push(`/category/`+item)
+      window.location.href = `/category/` + item
     }
 
     return {
