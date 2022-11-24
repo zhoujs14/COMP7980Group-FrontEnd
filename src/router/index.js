@@ -1,19 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/users/Home.vue'
 import MovieDetail from '@/views/users/MovieDetail.vue'
+import CategoryDetail from '@/views/users/CategoryDetail.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home,
-    children: [
-      {
-        path: 'movie/:id',
-        name: 'Movie',
-        component: MovieDetail,
-      }
-    ]
+  },
+  {
+    path: '/movie/:id',
+    name: 'Movie',
+    component: MovieDetail,
+  },
+  {
+    path: '/category/:name',
+    name: 'CategoryDetail',
+    component: CategoryDetail,
   }
 ]
 

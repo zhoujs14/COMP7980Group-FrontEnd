@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @click="onClick">
     <div class="poster w-100">poster</div>
     <div>Movie Name</div>
     <div class="btnRow">
@@ -10,8 +10,18 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
 export default {
   name: 'MovieCard',
+  setup() {
+    const router = useRouter()
+    const onClick = () => {
+      router.push('/movie/123')
+    }
+    return {
+      onClick
+    }
+  }
 }
 </script>
 
