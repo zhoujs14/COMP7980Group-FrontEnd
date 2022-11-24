@@ -2,20 +2,24 @@
   <div @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
     <div id="category" class="item">Category</div>
     <div v-if="categoriesVisible" class="categories">
-      <a class="categoryLink d-block col-4" v-for="(item, index) in categories" :key="index">{{ item }}</a>
+      <a class="categoryLink d-block col-4" v-for="(item, index) in categories" :key="index"
+        @click="() => onClick(item)">{{ item
+        }}</a>
     </div>
   </div>
 </template>
 <script>
 // 选取电影类别 跳转类别页面
-import { ref } from 'vue';
+import { ref,watch } from 'vue';
+import { useRouter } from 'vue-router';
 export default {
   name: "CategorySelector",
   setup() {
+    const categoriesVisible = ref(false)
     const categories = ref(["All", "Action", "Biography", "Crime", "Family", "Horror",
       "Romance", "Sports", "War", "Adventure", "Comedy", "Documentary", "Fantasy", "Thriller",
       "Animation", "Costume", "Drama", "History", "Musical", "Psychological"])
-    const categoriesVisible = ref(false)
+
 
     const onMouseEnter = () => {
       categoriesVisible.value = true
@@ -28,13 +32,19 @@ export default {
       document.getElementById('category').style.color = 'white'
     }
 
+    const router = useRouter()
+    const onClick = (item) => {
+      router.push(`/category/`+item)
+    }
+
     return {
       categories,
       categoriesVisible,
       onMouseEnter,
-      onMouseLeave
+      onMouseLeave,
+      onClick
     }
-  }
+  },
 }
 </script>
 <style>
