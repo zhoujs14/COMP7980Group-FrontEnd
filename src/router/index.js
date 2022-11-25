@@ -3,6 +3,7 @@ import Home from '@/views/user/Home.vue'
 import MovieDetail from '@/views/user/MovieDetail.vue'
 import CategoryDetail from '@/views/user/CategoryDetail.vue'
 import Search from '@/views/user/Search'
+import AdminHome from '@/views/admin/Home'
 
 const routes = [
   {
@@ -25,7 +26,11 @@ const routes = [
     name: 'Search',
     component: Search,
   },
-
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: AdminHome,
+  },
 ]
 
 const router = createRouter({
