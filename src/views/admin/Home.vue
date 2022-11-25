@@ -17,10 +17,10 @@
           </div>
         </div>
         <div class="card border-success mb-3" style="max-width: 18rem;">
-          <div class="card-header w-100">Tickets</div>
+          <div class="card-header w-100">Categories</div>
           <div class="card-body text-success">
-            <h5 class="card-title"><strong>25</strong> Tickets now</h5>
-            <p class="card-text">Click the button below to manager tickets in the system</p>
+            <h5 class="card-title"><strong>25</strong> Categories now</h5>
+            <p class="card-text">Click the button below to manager Categories in the system</p>
             <button class="btn btn-success">Manage</button>
           </div>
         </div>
