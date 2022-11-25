@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import NavBar from '../../components/user/NavBar.vue';
+import NavBar from '@/components/user/NavBar.vue';
 
 export default {
   name: "MovieDetail",

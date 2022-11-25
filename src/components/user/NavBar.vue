@@ -1,4 +1,5 @@
 <template>
+  <div style="height:40px"></div>
   <!-- Nav Bar -->
   <header>
     <!-- left side -->
@@ -116,6 +117,9 @@ export default {
 
 <style>
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
