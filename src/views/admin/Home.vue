@@ -6,14 +6,14 @@
     <!-- Admin Menu -->
     <div class="container">
       <!-- Cards with management functions -->
-      <h2 class="row d-block" style="text-align:left">Management Cards</h2>
+      <h2 class="row d-block" style="text-align:left">Moduel Management</h2>
       <div id="cardRow">
         <div class="card border-secondary mb-3" style="max-width: 18rem;">
           <div class="card-header w-100">Users</div>
           <div class="card-body text-secondary">
             <h5 class="card-title"><strong>1000</strong> users in the system</h5>
             <p class="card-text">Click the button below to manager users in the system</p>
-            <button class="btn btn-secondary">Manage</button>
+            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#userModal">Manage</button>
           </div>
         </div>
         <div class="card border-success mb-3" style="max-width: 18rem;">
@@ -21,7 +21,7 @@
           <div class="card-body text-success">
             <h5 class="card-title"><strong>25</strong> Categories now</h5>
             <p class="card-text">Click the button below to manager Categories in the system</p>
-            <button class="btn btn-success">Manage</button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#categoryModal">Manage</button>
           </div>
         </div>
         <div class="card border-warning mb-3" style="max-width: 18rem;">
@@ -29,7 +29,7 @@
           <div class="card-body">
             <h5 class="card-title"><strong>1234</strong> movies in the system</h5>
             <p class="card-text">Click the button below to manager Movies in the system</p>
-            <button class="btn btn-warning">Manage</button>
+            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#movieModal">Manage</button>
           </div>
         </div>
         <div class="card border-dark mb-3" style="max-width: 18rem;">
@@ -37,10 +37,17 @@
           <div class="card-body text-dark">
             <h5 class="card-title"><strong>154854</strong> tiket sold</h5>
             <p class="card-text">Click the button below to manager tikets in the system</p>
-            <button class="btn btn-secondary">Manage</button>
+            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ticketModal">Manage</button>
           </div>
         </div>
       </div>
+      <!-- Management Modal -->
+      <UserMgnt />
+      <MovieMgnt />
+      <CategoriesMgnt />
+      <TicketsMgnt />
+
+
       <!-- Statistic Area -->
       <h2 class="my-4" style="text-align:left">Statistic</h2>
       <nav>
@@ -72,9 +79,13 @@ import { ref, onMounted } from 'vue'
 import AdminLogin from '@/components/admin/Login.vue'
 import NavBar from '@/components/admin/NavBar.vue'
 import Chart from '@/components/admin/Chart.vue'
+import UserMgnt from './UserMgnt.vue'
+import MovieMgnt from './MovieMgnt.vue'
+import CategoriesMgnt from './CategoriesMgnt.vue'
+import TicketsMgnt from './TicketsMgnt.vue'
 export default {
   name: "AdminHome",
-  components: { AdminLogin, NavBar, Chart },
+  components: { AdminLogin, NavBar, Chart, UserMgnt, MovieMgnt, CategoriesMgnt, TicketsMgnt },
   setup() {
     const isLogin = ref(true)
 
@@ -83,7 +94,6 @@ export default {
     }
 
     onMounted(() => {
-      console.log('isLoginL:', isLogin.value)
     })
 
     return {
