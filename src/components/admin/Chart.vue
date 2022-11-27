@@ -172,9 +172,9 @@ export default {
     }
 
     onMounted(async () => {
-      getChart1()
-      getChart2()
-      getChart3()
+      // getChart1()
+      // getChart2()
+      // getChart3()
     });
 
     return {

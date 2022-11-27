@@ -6,8 +6,8 @@
     <!-- Admin Menu -->
     <div class="container">
       <!-- Cards with management functions -->
-      <h2 class="row d-block" style="text-align:left">Moduel Management</h2>
-      <div id="cardRow">
+      <h2 class="row d-block" style="text-align:left">Module Management</h2>
+      <div class="d-flex flex-row justify-content-around">
         <div class="card border-secondary mb-3" style="max-width: 18rem;">
           <div class="card-header w-100">Users</div>
           <div class="card-body text-secondary">
@@ -103,9 +103,3 @@ export default {
   }
 }
 </script>
-<style>
-#cardRow {
-  display: flex;
-  flex-wrap: wrap;
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div style="height:40px"></div>
+  <div style="height:50px"></div>
   <!-- Nav Bar -->
   <header>
     <!-- left side -->
